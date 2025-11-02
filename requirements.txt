@@ -6,3 +6,4 @@ folium>=0.17.0
 streamlit-folium>=0.18.0
 numpy>=1.26.0
 python-dateutil>=2.9.0
+statsmodels>=0.14.2
