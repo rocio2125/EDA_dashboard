@@ -1,0 +1,238 @@
+,codigo,nombre,zona,media_miles
+0,101,Plaza de Castilla,A,1273.37
+1,102,Valdeacederas,A,237.58
+2,103,Tetuán,A,308.42
+3,104,Estrecho,A,427.2
+4,105,Alvarado,A,185.87
+5,106,Cuatro Caminos,A,590.56
+6,107,Ríos Rosas,A,188.05
+7,108,Iglesia,A,272.8
+8,109,Bilbao,A,361.08
+9,110,Tribunal,A,450.84
+10,111,Gran Vía,A,654.56
+11,112,Sol,A,1712.89
+12,113,Tirso de Molina,A,331.19
+13,114,Antón Martín,A,229.87
+14,115,Estación del Arte,A,234.59
+15,116,Atocha-Renfe,A,685.56
+16,117,Menéndez Pelayo,A,167.1
+17,118,Pacífico,A,467.35
+18,119,Puente de Vallecas,A,349.28
+19,120,Nueva Numancia,A,385.95
+20,121,Portazgo,A,225.38
+21,122,Buenos Aires,A,161.73
+22,123,Alto del Arenal,A,189.32
+23,124,Miguel Hernández,A,207.95
+24,125,Sierra de Guadalupe,A,251.21
+25,126,Villa de Vallecas,A,184.78
+26,127,Congosto,A,136.29
+27,128,La Gavia,A,112.89
+28,129,Las Suertes,A,183.77
+29,130,Valdecarros,A,102.06
+30,151,Chamartín,A,577.95
+31,152,Bambú,A,86.77
+32,153,Pinar de Chamartín,A,332.17
+33,201,Ventas,A,252.03
+34,202,Manuel Becerra,A,330.63
+35,203,Goya,A,581.19
+36,204,Príncipe de Vergara,A,210.6
+37,205,Retiro,A,249.96
+38,206,Banco de España,A,273.48
+39,207,Sevilla,A,133.67
+40,209,Ópera,A,492.93
+41,210,Santo Domingo,A,154.16
+42,211,Noviciado,A,163.58
+43,212,San Bernardo,A,213.82
+44,213,Quevedo,A,230.22
+45,214,Canal,A,234.22
+46,251,La Elipa,A,252.33
+47,252,La Almudena,A,114.72
+48,253,Alsacia,A,173.8
+49,254,Avenida de Guadalajara,A,112.29
+50,255,Las Rosas,A,107.69
+51,301,Legazpi,A,648.35
+52,302,Delicias,A,299.31
+53,303,Palos de la Frontera,A,226.03
+54,304,Embajadores,A,540.89
+55,305,Lavapiés,A,334.23
+56,307,Callao,A,636.41
+57,308,Plaza de España,A,831.35
+58,309,Ventura Rodríguez,A,126.5
+59,310,Argüelles,A,683.51
+60,311,Moncloa,A,1732.67
+61,351,Almendrales,A,231.35
+62,352,Hospital 12 de Octubre,A,181.92
+63,353,San Fermín-Orcasur,A,227.63
+64,354,Ciudad de los Ángeles,A,262.84
+65,355,Villaverde Bajo-Cruce,A,399.66
+66,356,San Cristóbal,A,183.94
+67,357,Villaverde Alto,A,309.69
+68,404,Alonso Martínez,A,449.21
+69,405,Colón,A,98.62
+70,406,Serrano,A,210.8
+71,407,Velázquez,A,173.41
+72,409,Lista,A,131.34
+73,410,Diego de León,A,478.83
+74,411,Avenida de América,A,1012.03
+75,412,Prosperidad,A,176.25
+76,413,Alfonso XIII,A,218.31
+77,414,Avenida de La Paz,A,88.53
+78,415,Arturo Soria,A,163.35
+79,416,Esperanza,A,129.69
+80,417,Canillas,A,192.36
+81,418,Mar de Cristal,A,262.01
+82,419,San Lorenzo,A,127.28
+83,420,Parque de Santa María,A,105.41
+84,421,Hortaleza,A,120.23
+85,422,Manoteras,A,80.92
+86,501,Canillejas,A,226.75
+87,502,Torre Arias,A,146.99
+88,503,Suanzes,A,185.09
+89,504,Ciudad Lineal,A,272.62
+90,505,Pueblo Nuevo,A,349.4
+91,506,Quintana,A,229.22
+92,507,El Carmen,A,282.43
+93,510,Núñez de Balboa,A,300.87
+94,511,Rubén Darío,A,169.17
+95,513,Chueca,A,166.7
+96,517,La Latina,A,289.49
+97,518,Puerta de Toledo,A,160.14
+98,519,Acacias,A,103.41
+99,520,Pirámides,A,135.55
+100,521,Marqués de Vadillo,A,313.68
+101,522,Urgel,A,268.53
+102,523,Oporto,A,640.42
+103,524,Vista Alegre,A,235.28
+104,525,Carabanchel,A,217.24
+105,526,Eugenia de Montijo,A,122.26
+106,527,Aluche,A,505.03
+107,528,Empalme,A,107.55
+108,529,Campamento,A,177.0
+109,530,Casa de Campo,A,127.08
+110,551,El Capricho,A,60.56
+111,552,Alameda de Osuna,A,115.23
+112,601,Laguna,A,211.79
+113,602,Carpetana,A,326.0
+114,604,Opañel,A,222.74
+115,605,Plaza Elíptica,A,670.04
+116,606,Usera,A,457.77
+117,608,Arganzuela-Planetario,A,116.15
+118,609,Méndez Álvaro,A,644.53
+119,611,Conde de Casal,A,419.87
+120,612,Sáinz de Baranda,A,240.08
+121,613,O´Donnell,A,290.66
+122,617,República Argentina,A,108.75
+123,618,Nuevos Ministerios,A,1311.62
+124,620,Guzmán el Bueno,A,252.28
+125,621,Vicente Aleixandre,A,126.02
+126,622,Ciudad Universitaria,A,347.21
+127,625,Príncipe Pío,A,1319.88
+128,626,Puerta del Ángel,A,263.76
+129,627,Alto de Extremadura,A,202.04
+130,628,Lucero,A,299.8
+131,701,Las Musas,A,98.21
+132,702,San Blas,A,121.94
+133,703,Simancas,A,182.3
+134,704,García Noblejas,A,187.14
+135,705,Ascao,A,189.15
+136,707,Barrio de la Concepción,A,187.87
+137,708,Parque de las Avenidas,A,108.82
+138,709,Cartagena,A,118.89
+139,711,Gregorio Marañón,A,323.47
+140,712,Alonso Cano,A,141.7
+141,714,Islas Filipinas,A,316.08
+142,716,Francos Rodríguez,A,214.31
+143,717,Valdezarza,A,105.97
+144,718,Antonio Machado,A,111.24
+145,719,Peñagrande,A,185.83
+146,720,Avenida de la Ilustración,A,105.51
+147,721,Lacoma,A,81.25
+148,722,Arroyofresno,A,26.38
+149,723,Pitis,A,41.09
+150,751,Estadio Metropolitano,A,91.51
+151,754,Barrio del Puerto,B1,88.7
+152,755,Coslada Central,B1,204.41
+153,756,La Rambla,B1,160.18
+154,757,San Fernando,B1,164.95
+155,758,Jarama,B1,246.43
+156,759,Henares,B1,246.43
+157,760,Hospital del Henares,B1,246.43
+158,802,Colombia,A,342.95
+159,803,Pinar del Rey,A,134.07
+160,805,Feria de Madrid,A,151.92
+161,806,Aeropuerto T1-T2-T3,A,214.01
+162,807,Barajas,A,178.83
+163,808,Aeropuerto T-4,A,195.06
+164,901,Herrera Oria,A,121.53
+165,902,Barrio del Pilar,A,259.95
+166,903,Ventilla,A,116.75
+167,905,Duque de Pastrana,A,53.9
+168,906,Pío XII,A,114.42
+169,908,Concha Espina,A,111.56
+170,909,Cruz del Rayo,A,96.7
+171,913,Ibiza,A,143.08
+172,915,Estrella,A,151.34
+173,916,Vinateros,A,164.86
+174,917,Artilleros,A,196.43
+175,918,Pavones,A,190.42
+176,919,Valdebernardo,A,154.79
+177,920,Vicálvaro,A,143.23
+178,921,San Cipriano,A,76.62
+179,922,Puerta de Arganda,A,249.96
+180,951,Mirasierra,A,76.76
+181,952,Paco de Lucía,A,87.03
+182,1001,Fuencarral,A,136.98
+183,1002,Begoña,A,338.78
+184,1005,Cuzco,A,282.01
+185,1006,Santiago Bernabéu,A,335.79
+186,1013,Lago,A,106.7
+187,1014,Batán,A,168.09
+188,1016,Colonia Jardín,A,504.52
+189,1018,Aviación Española,A,138.16
+190,1019,Cuatro Vientos,A,286.91
+191,1020,Joaquín Vilumbrales,B1,146.55
+192,1021,Puerta del Sur,B1,262.72
+193,1051,Tres Olivos,A,82.64
+194,1052,Montecarmelo,A,83.96
+195,1053,Las Tablas,A,141.06
+196,1054,Ronda de la Comunicación,A,37.01
+197,1055,La Granja,B1,66.64
+198,1056,La Moraleja,B1,105.35
+199,1057,Marqués de la Valdavia,B1,138.91
+200,1058,Manuel de Falla,B1,85.14
+201,1059,Baunatal,B1,73.92
+202,1060,Reyes Católicos,B1,86.04
+203,1061,Hospital Infanta Sofía,B1,113.4
+204,1102,Abrantes,A,75.38
+205,1103,Pan Bendito,A,50.58
+206,1104,San Francisco,A,94.21
+207,1105,Carabanchel Alto,A,99.14
+208,1106,La Peseta,A,82.8
+209,1107,La Fortuna,B1,65.45
+210,1202,Parque de Lisboa,B1,119.87
+211,1203,Alcorcón Central,B1,209.74
+212,1204,Parque Oeste,B1,108.42
+213,1205,Universidad Rey Juan Carlos,B2,134.85
+214,1206,Móstoles Central,B2,211.1
+215,1207,Pradillo,B2,174.89
+216,1208,Hospital de Móstoles,B2,140.24
+217,1209,Manuela Malasaña,B2,100.81
+218,1210,Loranca,B2,142.92
+219,1212,Hospital de Fuenlabrada,B2,117.76
+220,1213,Parque Europa,B2,101.26
+221,1214,Fuenlabrada Central,B2,215.34
+222,1215,Parque de los Estados,B2,134.25
+223,1217,Arroyo Culebro,B1,34.36
+224,1218,Conservatorio,B1,67.05
+225,1219,Alonso de Mendoza,B1,102.66
+226,1220,Getafe Central,B1,313.15
+227,1221,Juan de la Cierva,B1,206.92
+228,1222,El Casar,B1,170.69
+229,1223,Los Espartales,B1,63.35
+230,1224,El Bercial,B1,75.21
+231,1225,El Carrascal,B1,174.62
+232,1226,Julián Besteiro,B1,142.31
+233,1227,Casa del Reloj,B1,139.05
+234,1228,Hospital Severo Ochoa,B1,90.5
+235,1229,Leganés Central,B1,211.47
+236,1230,San Nicasio,B1,127.69
