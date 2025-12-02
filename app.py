@@ -8,28 +8,6 @@ from streamlit_folium import st_folium
 
 st.set_page_config(page_title="¿Cómo usamos el metro?", layout="wide")
 
-# === Fondo con imagen semitransparente ===
-page_bg_img = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url("./imagenes/esquema.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-[data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
-}
-
-[data-testid="stSidebar"] {
-    background: rgba(255,255,255,0.8);
-}
-</style>
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 st.title("Dashboard - ¿Cómo usamos el Metro?")
 
 # === CARGA DE DATOS DIRECTA ===
@@ -50,16 +28,43 @@ except Exception as e:
     st.stop()
 
 # === TABS === PESTAÑAS
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "🚇 Demanda diaria de transporte",
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "⏳ Registro histórico",
+    "🚇 Demanda diaria y otros medios de transporte",
     "📈 Distribucion semanal y anual",
-    "📌 Zona tarifaria y ranking de estaciones",
+    "📌 Zona tarifaria",
+    "⭐ Ranking de estaciones",
     "🗺️ Mapa de estaciones",
 ])
 
 # === TAB 1 ===
 with tab1:
+    # Registro histórico de entradas
+    st.header("Entradas históricas")
+
+    fechas = entradas_historico.columns[3:]
+    df_evol = pd.DataFrame({
+        "fecha": pd.to_datetime(fechas, format="%Y-%m"),
+        "entradas_totales": entradas_historico[fechas].sum().values
+    })
+    fig3 = px.scatter(df_evol, x="fecha", y="entradas_totales", trendline="ols",
+                      title="Evolución de entradas totales 2015–2025", template="plotly_white")
+    fig3.add_scatter(x=df_evol["fecha"], y=df_evol["entradas_totales"], mode="lines+markers", name="Evolución")
+    st.plotly_chart(fig3, use_container_width=True)
+
+    st.markdown(
+    """
+    Podemos ver cómo ha evolucionado el número total de entradas en el sistema de transporte público de Madrid desde 2015 
+    hasta 2025. Se pueden observar los ciclos anuales y las tendencias generales en el uso del transporte público. 
+    ### Resumen:
+    - La evolución histórica de las entradas totales muestra una tendencia creciente, con un aumento moderado.
+    - Acontecimientos como la pandemia de COVID-19 en 2020 provocaron una caída significativa en las entradas. Afectando
+    a la movilidad urbana y el uso del transporte público. Posteriormente, se observa una recuperación gradual en los años siguientes.
+    """, 
+    unsafe_allow_html=True)
+
+# === TAB 2 ===
+with tab2:
     # Demanda diaria del metro
     st.header("Demandada diaria de usuarios del metro")
     media_metro = ev_diaria["metro"].mean()
@@ -72,13 +77,15 @@ with tab1:
 
     st.markdown(
     """
+    En la grafica podemos ver los ciclos semanales y anuales en la demanda diaria del metro de Madrid. La linea roja
+    representa la media diaria de usuarios.
     ### Resumen:
     - La demanda diaria del metro de Madrid muestra una clara tendencia estacional, con picos en los meses de invierno y 
     valles en verano. 
     - La media diaria de usuarios del metro es de aproximadamente 1.9 millones.
     - Se observan picos significativos en días específicos:
-        * Día de mayor demanda: 29 de Noviembre de 2024 (2.78 millones de usuarios).
-        * Día de menor demanda: 25 de Agosto de 2023 (0.67 millones de usuarios).
+        * Día de mayor demanda: 29 de Noviembre de 2024 (2.78 millones de usuarios). Black Friday de ese año.
+        * Día de menor demanda: 25 de Diciembre de 2023 (0.67 millones de usuarios). Navidad de ese año.
     """, 
     unsafe_allow_html=True
     )   
@@ -112,30 +119,6 @@ with tab1:
     unsafe_allow_html=True
     )
 
-# === TAB 2 ===
-with tab2:
-    # Registro histórico de entradas
-    st.header("Entradas históricas")
-
-    fechas = entradas_historico.columns[3:]
-    df_evol = pd.DataFrame({
-        "fecha": pd.to_datetime(fechas, format="%Y-%m"),
-        "entradas_totales": entradas_historico[fechas].sum().values
-    })
-    fig3 = px.scatter(df_evol, x="fecha", y="entradas_totales", trendline="ols",
-                      title="Evolución de entradas totales 2015–2025", template="plotly_white")
-    fig3.add_scatter(x=df_evol["fecha"], y=df_evol["entradas_totales"], mode="lines+markers", name="Evolución")
-    st.plotly_chart(fig3, use_container_width=True)
-
-    st.markdown(
-    """
-    ### Resumen:
-    - La evolución histórica de las entradas totales muestra una tendencia creciente, con un aumento moderado.
-    - Acontecimientos como la pandemia de COVID-19 en 2020 provocaron una caída significativa en las entradas. Afectando
-    a la movilidad urbana y el uso del transporte público. Posteriormente, se observa una recuperación gradual en los años siguientes.
-    """, 
-    unsafe_allow_html=True
-    )   
 
 # === TAB 3 ===
 with tab3:
@@ -213,7 +196,7 @@ with tab3:
 with tab4:
     # ZONA TARIFARIA
     st.subheader("Distribución por zona tarifaria")
-    fig6 = px.box(ranking_estaciones, x="zona", y="media_miles", color="zona",
+    fig6 = px.box(ranking_estaciones, y="zona", x="media_miles", color="zona",
                   points=False, title="Media de entradas por zona", template="plotly_white")
     st.plotly_chart(fig6, use_container_width=True)
 
@@ -225,10 +208,11 @@ with tab4:
     disminuyendo los valores medios según nos alejamos del centro de la ciudad.
     """, 
     unsafe_allow_html=True
-    )   
-    # RANKING
-    st.subheader("📋 Ranking de estaciones más utilizadas")
-
+    )  
+# === TAB 5 ===
+with tab5:
+    st.header("⭐ Ranking de estaciones")
+ 
     df = estaciones_mapa.copy()
 
     # --- Filtros interactivos ---
@@ -304,8 +288,8 @@ with tab4:
         mime="text/csv"
     )
 
-# === TAB 5 ===
-with tab5:
+# === TAB 6 ===
+with tab6:
     st.header("🗺️ Mapa interactivo de estaciones")
 
     # --- Filtros ---
@@ -320,7 +304,7 @@ with tab5:
         "Número de estaciones a mostrar (según ranking):",
         min_value=5,
         max_value=len(estaciones_mapa),
-        value=50,
+        value=len(estaciones_mapa),
         step=5
     )
 
